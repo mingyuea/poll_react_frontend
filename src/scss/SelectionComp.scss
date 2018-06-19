@@ -1,0 +1,28 @@
+@import 'measurements';
+
+.selCont{
+	@extend %compContShared;
+	width: $selContW;
+	left: $selContL;
+}
+
+.buttonCont{
+	position: absolute;
+	height: 70%;
+	width: 100%;
+	top: 25%;
+	overflow-y: auto
+}
+
+.buttonDiv{
+	width: 60%;
+	margin: 5px;
+	padding: 5px;
+	border-radius: 5px;
+	background-color: rgba(77, 143, 249, 1);
+}
+
+.buttonDiv:hover{
+	cursor: pointer;
+	background-color: rgba(119, 171, 255, 1);
+}

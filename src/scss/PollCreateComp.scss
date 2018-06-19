@@ -1,0 +1,16 @@
+$contTop: 20%;
+$contLeft: 25%;
+$contWidth: 50%;
+$contHt : 60%;
+$contBG: rgba(140, 140, 145, 1);
+
+.formCont{
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	height: 50%;
+	width: 50%; 
+	z-index: 30;
+	background-color: rgba(140, 140, 145, 1);
+	border-radius: 10px;
+}

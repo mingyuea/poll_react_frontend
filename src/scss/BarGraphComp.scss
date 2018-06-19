@@ -1,0 +1,67 @@
+@import 'measurements';
+
+$sharedWidth: 7%;
+$cateContHt: 15%;
+$barContHt: 75%;
+$bufferContHt: 10%;
+$barColor: rgba(77, 143, 249, 1);
+
+%graphElemShared{
+	position: absolute;
+	width: $sharedWidth;
+	display: inline-block;
+}
+
+%contShared{
+	position: absolute;
+	width: 100%;
+}
+
+.graphCont{
+	@extend %compContShared;
+	width: $graphContW;
+	left: $graphContL;
+	overflow-x: auto;
+}
+
+.barCont{
+	@extend %contShared;
+	height: $barContHt;
+	min-height: 200px;
+	border-left: 2px solid black;
+	border-bottom: 2px solid black;
+	bottom: $cateContHt;
+}
+
+.cateCont{
+	@extend %contShared;
+	height: $cateContHt;
+	min-height: 25px;
+	bottom: 0;
+}
+
+.bufferCont{
+	@extend %contShared;
+	height: $bufferContHt;
+	min-height: 15px;
+	bottom: $barContHt + $cateContHt;
+	z-index: -1;
+}
+
+.myBar {
+	@extend %graphElemShared;
+	bottom: 0;
+	background-color: $barColor;
+	color: white;
+}
+
+.percentDisp{
+	@extend %graphElemShared;
+	height: 7%;
+	margin: 0 0 5px 0;
+	font-size: 0.8em;
+}
+
+.myCate{
+	@extend %graphElemShared;
+}

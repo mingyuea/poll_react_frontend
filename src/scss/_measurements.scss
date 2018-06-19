@@ -1,0 +1,14 @@
+$graphContL: 35%;
+$graphContW: 55%;
+$selContL: 5%;
+$selContW: $graphContL - $selContL; 
+$contTop: 15%;
+$contHt: 70%;
+
+%compContShared{
+	position: absolute;
+	display: inline-block;
+	top: $contTop;
+	height: $contHt;
+	min-height: 250px;
+}
