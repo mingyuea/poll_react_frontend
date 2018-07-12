@@ -21,9 +21,9 @@ class SubmitComp extends React.Component {
 		return(
 			<div style={this.props.style} className={Styles.parentCont}>
 				<div className={Styles.boxCont}>
-				<div>Vote for {this.props.selCate}?</div>
-				<div onClick={this.handleSubmit} className={Styles.btnCont}>Submit</div>
-				<div onClick={this.handleCancel} className={Styles.btnCont}>Cancel</div>
+					<div className={Styles.title}>Vote for {this.props.selCate}?</div>
+					<div onClick={this.handleSubmit} className={Styles.btnCont}>Submit</div>
+					<div onClick={this.handleCancel} className={Styles.btnCont}>Cancel</div>
 				</div>
 			</div>
 		);

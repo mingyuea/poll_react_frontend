@@ -1,3 +1,22 @@
+@import 'parentMainCont';
+
+$createBtnBG: rgba(152, 173, 169, 1);
+$createFontColor: rgba(61, 68, 67,1);
+
+%btnShared{
+	position: absolute;
+	background-color: $createBtnBG;
+	color: $createFontColor;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+%btnHoverShared{
+	cursor: pointer;
+	background-color: rgba(135, 155, 151, 1);
+	color: black;
+}
+
 .rootCont, .mainCont, .secondCont, .createCont{
 	height: 100%;
 	width: 100%;
@@ -11,4 +30,33 @@
 	top: 0;
 	left: 0;
 	background-color: rgba(179, 179, 181, 0.6);
+}
+
+.titleCont{
+	position: absolute;
+	top: $titleTop;
+	left: $titleLeft;
+	font-size: 1.5em;
+	font-family: serif;
+}
+
+.createBtn{
+	@extend %btnShared;
+	left: $crBtnLeft;
+	top: $crBtnTop;
+	
+}
+
+.createBtn:hover{
+	@extend %btnHoverShared;
+}
+
+.backToListBtn{
+	@extend %btnShared;
+	top: $backBtnTop;
+	left: $backBtnLeft;
+}
+
+.backToListBtn:hover{
+	@extend %btnHoverShared;
 }

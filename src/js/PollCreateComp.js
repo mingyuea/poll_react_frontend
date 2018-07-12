@@ -34,22 +34,24 @@ class PollCreateComp extends React.Component {
 	render(){
 		let errorMsg = "";
 		if(this.props.error.length > 0){
-			errorMsg = <label>{this.props.error}</label>;
+			errorMsg = <label className={Styles.errorMsg}>{this.props.error}</label>;
 		}
 		return(
 			<div className={Styles.formCont}>
 			<form onSubmit={this.handleSubmit}>
 				<label>
-					Poll Name:
+					<div className={Styles.formElemCont}>Poll Name: </div>
 					<input type="text" value={this.props.newPollName} onChange={this.handleNameChange} />
 				</label>
 				<label>
-					Enter in choices (seperated by commas):
+					<div className={Styles.formElemCont}>Enter in choices (seperated by commas):</div>
 					<input type="text" value={this.props.newPollChoice} onChange={this.handleChoiceChange} />
 				</label>
 				{errorMsg}
-				<input type="submit" value="Submit"/>
-				<button onClick={this.handleCancel}>Cancel</button>
+				<div className={Styles.btnCont}>
+					<input type="submit" value="Submit"/>
+					<button onClick={this.handleCancel}>Cancel</button>
+				</div>
 			</form>
 			</div>
 		);

@@ -1,0 +1,22 @@
+@import 'parentMainCont';
+
+.listCont{
+	position: absolute;
+	top: $listTop;
+	left: $listLeft;
+	width: $listWidth;
+}
+
+.listItem{
+	border-radius: 5px;
+	padding: 5px 20px;
+	margin: 5px;
+	width: 75%;
+	background-color:rgba(66, 200, 244, 1);
+	overflow-x: hidden;
+}
+
+.listItem:hover{
+	cursor: pointer;
+	background-color: rgba(113, 231, 247, 1);
+}

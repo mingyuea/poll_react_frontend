@@ -193,14 +193,15 @@ class ParentContainer extends React.Component {
 		return (
 			<div className={Styles.rootCont}>
 				<div className={Styles.mainCont} style={this.state.listStyle}>
+					<div className={Styles.titleCont}>List Of Polls</div>
 					<ListComp style={this.state.listStyle} pollList={this.state.initData} onSelect={this.handleListSelect}/>
-					<div onClick={this.handleCreateInit}>Create New Poll</div>
+					<div className={Styles.createBtn} onClick={this.handleCreateInit}>Create New Poll</div>
 				</div>
 				<div style={this.state.createStyle} className={Styles.createCont}>
 					<PollCreateComp newPollName={this.state.createName} newPollChoice={this.state.createCate} error={this.state.createError} onNameChange={this.handleCreateNameChange} onChoiceChange={this.handleCreateChoiceChange} onSubmit={this.handleCreateSubmit} onCancel={this.handleCreateCancel} />
 				</div>
 				<div className={Styles.secondCont} style={this.state.graphStyle}>
-					<div onClick={this.handleBackToList}>Back to Polls List</div>
+					<div className={Styles.backToListBtn} onClick={this.handleBackToList}> Back to Polls List </div>
 					<SelectionComp onSelect={this.handleVoteSelect} pollName={this.state.currentPollName} pollData={this.state.serverData} />
 					<BarGraphComp pollData={this.state.serverData} />
 					<SubmitComp style={this.state.submitStyle} selCate={this.state.currentSel} onSubmit={this.handleVoteSubmit} onCancel={this.handleVoteCancel}/>

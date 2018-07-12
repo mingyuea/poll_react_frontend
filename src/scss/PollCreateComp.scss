@@ -3,14 +3,38 @@ $contLeft: 25%;
 $contWidth: 50%;
 $contHt : 60%;
 $contBG: rgba(140, 140, 145, 1);
+$errorMsgLeft: 10%;
+$errorMsgTop: 75%;
+$btnContLeft: 15%;
+$btnContTop: 80%;
+
 
 .formCont{
 	position: absolute;
 	top: 25%;
 	left: 25%;
 	height: 50%;
-	width: 50%; 
+	width: 50%;
+	padding: 10px; 
 	z-index: 30;
 	background-color: rgba(140, 140, 145, 1);
 	border-radius: 10px;
+}
+
+.formElemCont{
+	padding: 5px;
+	display: block;
+}
+
+.errorMsg{
+	postion: absolute;
+	color: red;
+	top: $errorMsgTop;
+	left: $errorMsgLeft;
+}
+
+.btnCont{
+	position: absolute;
+	top: $btnContTop;
+	left: $btnContLeft;
 }
